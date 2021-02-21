@@ -31,7 +31,7 @@ const Formulario = () => {
   const saveForm = async () => {
     try {
       form['image_post'] = onClickInsta(form.url_post);
-      const response = await fetch('/api/portfolio/posts/createpost', {
+      const response = await fetch('/api/portfolio/createpost', {
         method: 'POST',
         body: JSON.stringify(form)
       });
