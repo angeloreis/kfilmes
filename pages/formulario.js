@@ -24,7 +24,7 @@ const Formulario = () => {
     if (response.data) {
       console.log(response.data);
       console.log(response.data.graphql.shortcode_media_display_url);
-      imageInsta = response.data.graphql.shortcode_media_display_url;
+      imageInsta = response.data.graphql.shortcode_media.display_url;
       return imageInsta;
     }
     return null;
