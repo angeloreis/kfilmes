@@ -22,6 +22,8 @@ const Formulario = () => {
     const response = await checkInsta.get(`${idPost}/?__a=1`);
     let imageInsta = null;
     if (response.data) {
+      console.log(response.data);
+      console.log(response.data.graphql.shortcode_media_display_url);
       imageInsta = response.data.graphql.shortcode_media_display_url;
       return imageInsta;
     }
