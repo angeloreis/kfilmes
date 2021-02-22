@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PostItem = ({ url_post, imagem_post, description_post }) => (
-  <div className='p-4 md:w-1/3 sm:mb-0 mb-6 border-0 border-red-900'>
+  <div className='p-4 border-red-900 md:w-1/3 sm:mb-0 mb-6 '>
     <div className='rounded-lg h-64 overflow-hidden'>
       <img
         alt='content'
@@ -9,7 +9,9 @@ const PostItem = ({ url_post, imagem_post, description_post }) => (
         src={imagem_post}
       />
     </div>
-    <p className='text-base leading-relaxed mt-2'>{description_post}</p>
+    <p className='text-base leading-relaxed mt-2'>
+      {description_post.substr(0, 180).concat('...')}
+    </p>
     <a
       className='text-red-500 inline-flex items-center mt-3'
       target='_blank'
