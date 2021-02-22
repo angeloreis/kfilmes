@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PostItem = ({ url_post, imagem_post, description_post }) => (
-  <div className='p-4 md:w-1/3 sm:mb-0 mb-6'>
+  <div className='p-4 md:w-1/3 sm:mb-0 mb-6 border-0 border-red-900'>
     <div className='rounded-lg h-64 overflow-hidden'>
       <img
         alt='content'
