@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import useSWR from 'swr';
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const checkInsta = axios.create({
   baseURL: 'https://instagram.com/p/'
 });
 
 const Formulario = () => {
+  const { data, error } = useSWR('/api/createpost', fetcher);
   const [form, setForm] = useState({
     url_post: '',
     description_post: '',
@@ -22,18 +26,19 @@ const Formulario = () => {
     const response = await checkInsta.get(`${idPost}/?__a=1`);
     let imageInsta = null;
     if (response.data) {
-      console.log(response.data);
-      console.log(response.data.graphql.shortcode_media.display_url);
       imageInsta = response.data.graphql.shortcode_media.display_url;
-      return imageInsta;
+      setForm({
+        ...form,
+        image_post: imageInsta
+      });
+      console.log(form);
     }
-    return null;
   };
 
   const saveForm = async () => {
     try {
-      form['image_post'] = onClickInsta(form.url_post);
-      const response = await fetch('/api/portfolio/createpost', {
+      onClickInsta(form.url_post);
+      const response = await fetch('/api/createpost', {
         method: 'POST',
         body: JSON.stringify(form)
       });

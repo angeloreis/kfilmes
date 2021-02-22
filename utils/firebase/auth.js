@@ -18,16 +18,15 @@ const serviceAccount = {
 
 let db;
 
-if (!admin.apps.length) {
-  try {
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
-      databaseURL: 'https://kfilmes-base.firebaseio.com'
-    });
-    db = admin.firestore();
-  } catch (error) {
-    console.log('Inicialização do Firebase admin deu erro', error.stack);
-  }
+try {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: 'https://kfilmes-base.firebaseio.com'
+  });
+  db = admin.firestore();
+  console.log(db);
+} catch (error) {
+  console.log('Inicialização do Firebase admin deu erro', error.stack);
 }
 
 export default db;

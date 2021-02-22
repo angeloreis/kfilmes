@@ -1,4 +1,4 @@
-import db from '../../../utils/firebase/auth';
+import db from '../../utils/firebase/auth';
 
 export default async (req, res) => {
   const { id, data } = JSON.parse(req.body);
