@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div className='flex flex-col'>
+    <div id='quemsomos' className='flex flex-col'>
       <div className='h-1 bg-gray-100 rounded overflow-hidden'>
         <div className='w-24 h-full bg-red-500'></div>
       </div>

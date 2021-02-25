@@ -8,7 +8,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 const Portfolio = () => {
   const { data } = useSWR('/api/findall', fetcher);
   return (
-    <div id='#portfolio'>
+    <div id='portfolio'>
       <div className='container px-5 py-4 mx-auto'>
         <div className='flex flex-col'>
           <div className='h-1 bg-gray-200 rounded overflow-hidden'>

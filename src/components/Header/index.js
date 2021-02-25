@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 const Header = () => {
   return (
     <div className='w-full'>
@@ -6,7 +7,7 @@ const Header = () => {
         <div className='md:flex items-center justify-between py-2 px-8 md:px-12'>
           <div className='flex justify-between items-center'>
             <div className='text-2xl font-bold text-gray-800 md:text-3xl'>
-              <a href='#'>
+              <a href='/'>
                 <img
                   src='/images/logo.png'
                   width={128}
@@ -30,36 +31,31 @@ const Header = () => {
             </div>
           </div>
           <div className='flex flex-col md:flex-row hidden md:block -mx-2'>
-            <a
-              href='#'
-              className='text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2'
-            >
-              Home
-            </a>
-            <a
-              href='#'
-              className='text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2'
-            >
-              Quem somos
-            </a>
-            <a
-              href='#'
-              className='text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2'
-            >
-              PortFólio
-            </a>
-            <a
-              href='#'
-              className='text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2'
-            >
-              Contato
-            </a>
-            <a
-              href='https://webmail.kfilmes.digital'
-              className='text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2'
-            >
-              Webmail
-            </a>
+            <Link href='/'>
+              <a className='text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2'>
+                Home
+              </a>
+            </Link>
+            <Link href='#quemsomos'>
+              <a className='text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2'>
+                Quem somos
+              </a>
+            </Link>
+            <Link href='#portfolio'>
+              <a className='text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2'>
+                PortFólio
+              </a>
+            </Link>
+            <Link href='#contato'>
+              <a className='text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2'>
+                Contato
+              </a>
+            </Link>
+            <Link href='https://webmail.kfilmes.digital'>
+              <a className='text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2'>
+                Webmail
+              </a>
+            </Link>
           </div>
         </div>
       </nav>
