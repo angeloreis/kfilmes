@@ -1,6 +1,11 @@
 {
-  "name": "react-avancado-boilerplater",
-  "version": "1.0.0",
+  "name": "site-kfilmes",
+  "version": "3.0.0",
+  "author": {
+    "name": "Angelo Reis",
+    "email": "angelo.desenvolvedor@gmail.com",
+    "url": "https://angeloreis.dev.br"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
