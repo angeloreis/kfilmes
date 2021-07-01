@@ -5,7 +5,7 @@ import LogoSite from 'components/Logo'
 import LogoDream from 'components/LogoDream'
 import AboutUs from 'components/AboutUs'
 import HeaderTitleSection from 'components/HeaderSection'
-import * as S from './styles'
+import * as S from '../styles/styles'
 
 const Home: NextPage = () => {
   return (
