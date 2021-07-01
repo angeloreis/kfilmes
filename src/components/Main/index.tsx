@@ -4,9 +4,9 @@ const Main = ({
   title = 'React Advanced',
   description = 'Typescript, ReactJS, NextJS and Styled Components'
 }) => (
-  <S.Wrapper>
+  <>
     <S.Logo
-      src="/img/logo.svg"
+      src="/img/logo-medio.png"
       alt="image of Atom and written right: React Advanced course"
     />
     <S.Title>{title}</S.Title>
@@ -15,7 +15,7 @@ const Main = ({
       src="/img/hero-illustration.svg"
       alt="A developer guy in front a computer"
     />
-  </S.Wrapper>
+  </>
 )
 
 export default Main
