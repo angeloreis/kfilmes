@@ -7,7 +7,11 @@ interface LogoDreamType {
   heightImage?: number
 }
 
-const LogoDream = ({ description, widthImage, heightImage }: LogoDreamType) => {
+const LogoDream: React.FC<LogoDreamType> = ({
+  description,
+  widthImage,
+  heightImage
+}) => {
   return (
     <S.layoutLogoDream>
       <img

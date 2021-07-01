@@ -5,7 +5,7 @@ interface HeaderProps {
   children: React.ReactNode
 }
 
-const Header = ({ children }: HeaderProps) => {
+const Header: React.FC<HeaderProps> = ({ children }) => {
   return <S.layoutHeader>{children}</S.layoutHeader>
 }
 

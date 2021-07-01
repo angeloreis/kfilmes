@@ -1,3 +1,4 @@
+import { NextPage } from 'next'
 import Menu from 'components/Menu'
 import Header from 'components/Header'
 import LogoSite from 'components/Logo'
@@ -6,7 +7,7 @@ import AboutUs from 'components/AboutUs'
 import HeaderTitleSection from 'components/HeaderSection'
 import * as S from './styles'
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <S.Wrapper id="#home">
       <Header>
@@ -30,3 +31,5 @@ export default function Home() {
     </S.Wrapper>
   )
 }
+
+export default Home

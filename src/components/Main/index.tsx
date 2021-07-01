@@ -1,6 +1,11 @@
+import React from 'react'
 import * as S from './styles'
+export interface MainProps {
+  title: string
+  description: string
+}
 
-const Main = ({
+const Main: React.FC<MainProps> = ({
   title = 'React Advanced',
   description = 'Typescript, ReactJS, NextJS and Styled Components'
 }) => (

@@ -7,7 +7,11 @@ interface LogoSiteType {
   heightImage?: number
 }
 
-const LogoSite = ({ description, widthImage, heightImage }: LogoSiteType) => {
+const LogoSite: React.FC<LogoSiteType> = ({
+  description,
+  widthImage,
+  heightImage
+}) => {
   return (
     <S.layoutLogo>
       <img
