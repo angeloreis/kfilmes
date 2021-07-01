@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Main /> should render the heading 1`] = `
+.c0 {
+  width: 25rem;
+  margin-bottom: 2rem;
+}
+
+<img
+  alt="image of Atom and written right: React Advanced course"
+  class="c0"
+  src="/img/logo-medio.png"
+/>
+`
