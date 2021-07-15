@@ -12,8 +12,12 @@ const HeaderTitleSection = ({
 }: HeaderTitleSectionProps) => {
   return (
     <S.WrapperHeaderSection>
-      <S.DescriptionFirstLine>{descriptionFirstline}</S.DescriptionFirstLine>
-      <S.DescriptionSecondLine>{descriptionSecondLine}</S.DescriptionSecondLine>
+      <S.DescriptionFirstLine>
+        {descriptionFirstline.toUpperCase()}
+      </S.DescriptionFirstLine>
+      <S.DescriptionSecondLine>
+        {descriptionSecondLine.toUpperCase()}
+      </S.DescriptionSecondLine>
     </S.WrapperHeaderSection>
   )
 }
