@@ -2,22 +2,17 @@ import styled from 'styled-components'
 
 export const WrapperHeaderSection = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: center;
-  padding-top: 130px;
+  flex-direction: column;
+  align-items: flex-start;
 `
 
-export const DescriptionFirstLine = styled.div`
-  flex-direction: row;
+export const DescriptionFirstLine = styled.p`
   font-size: 6rem;
   font-weight: 500;
-  padding-left: 60px;
 `
 
-export const DescriptionSecondLine = styled.div`
-  flex-direction: row;
+export const DescriptionSecondLine = styled.p`
   font-size: 8rem;
   font-weight: 900;
-  color: #b02c1f;
+  margin-top: -25px;
 `

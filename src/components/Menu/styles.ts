@@ -7,7 +7,7 @@ export const WrapperMenu = styled.nav`
 `
 
 export const MenuNavegacao = styled.div`
-  float: right;
+  float: unset;
 `
 
 export const MenuBase = styled.ul`
@@ -27,5 +27,7 @@ export const MenuItem = styled.li`
 
   :hover {
     cursor: pointer;
+    border-bottom: 2px solid #b02c1f;
+    transition: border-bottom 0.3s;
   }
 `

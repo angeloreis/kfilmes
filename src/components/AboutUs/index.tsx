@@ -1,15 +1,16 @@
 import React from 'react'
+import HeaderTitleSection from '../HeaderSection'
+
 import * as S from './styles'
 
-interface AboutUsProps {
-  children: React.ReactNode
-}
-
-const AboutUs = ({ children }: AboutUsProps) => {
+const AboutUs = () => {
   return (
-    <S.WrapperAboutUs>
-      {children}
+    <S.WrapperAboutUsMain>
       <S.ContainerText>
+        <HeaderTitleSection
+          descriptionFirstline="Quem"
+          descriptionSecondLine="somos?"
+        />
         <S.AboutUsText>
           Quando você adiciona{' '}
           <strong>QUALIDADE, AGILIDADE E CRIATIVIDADE,</strong> com pessoas
@@ -30,15 +31,24 @@ const AboutUs = ({ children }: AboutUsProps) => {
         </S.AboutUsText>
         <S.AboutUsText>
           Em cada take, seja ele na terra ou no ar, sempre buscamos e{' '}
-          <strong>ALCANÇAMOS</strong>
+          <strong>ALCANÇAMOS </strong>
           algo novo e <strong>ESPETACULAR</strong>. Estamos prontos para somar
           forças com vocês e atender seus clientes de forma{' '}
           <strong>INOVADORA</strong>, em todos os formatos disponíveis no{' '}
           <strong>MERCADO.</strong>
           <br />-
         </S.AboutUsText>
+        <S.AboutUsSignatureText>
+          <S.AboutUsText>
+            Nos somos a <strong>K FILMES!</strong>
+            <p>Somos a sua mais nova opção</p>
+          </S.AboutUsText>
+        </S.AboutUsSignatureText>
       </S.ContainerText>
-    </S.WrapperAboutUs>
+      <S.AboutUsRightImg>
+        <img src="img/about-us-kfilmes-right.png" min-height="75%" />
+      </S.AboutUsRightImg>
+    </S.WrapperAboutUsMain>
   )
 }
 
