@@ -1,0 +1,38 @@
+.WrapperAboutUsMain {
+  display: flex;
+  flex-direction: row;
+}
+
+.WrapperTitleAboutUsMain {  
+  display: flex;
+  flex-direction: column;
+}
+
+.ContainerText {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  p {
+    text-align: justify;
+
+    font-size: 1.4rem;
+
+    @media (max-width: 720px) {
+      font-size: 1rem;
+    }
+
+    margin-right: 2.1rem;
+    margin-bottom: 0.9rem;
+  }
+  
+  .AboutUsSignatureText {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.AboutUsRightImg {
+  display: flex;
+  flex-direction: column;
+}

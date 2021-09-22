@@ -1,12 +1,10 @@
 import React from 'react'
-import * as S from './styles'
+import styles from './styles.module.scss'
 
 interface HeaderProps {
   children: React.ReactNode
 }
 
-const Header: React.FC<HeaderProps> = ({ children }) => {
-  return <S.layoutHeader>{children}</S.layoutHeader>
+export const Header: React.FC<HeaderProps> = ({ children }) => {
+  return <header className={styles.layoutHeader}>{children}</header>
 }
-
-export default Header

@@ -1,0 +1,19 @@
+.contentContainer {
+    width: 100%;    
+    margin: 0 auto;
+    padding: 0 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentContainerOperateArea {
+    width: 100%;    
+    margin: 0 auto;
+    padding: 0 2.5rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+}
