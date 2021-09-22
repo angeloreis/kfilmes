@@ -1,18 +1,14 @@
 import React from 'react'
+import styles from './styles.module.scss'
 
-import * as S from './styles'
-
-const GotToTop: React.FC = () => {
+export const GotToTop: React.FC = () => {
   const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
-    <S.WrapperDiv>
-      <S.ClickButton onClick={scrollTop}>
-        <S.ArrowUp></S.ArrowUp>
-        <S.ArrowUp>top</S.ArrowUp>
-      </S.ClickButton>
-    </S.WrapperDiv>
+    <div className={styles.WrapperDiv}>
+      <div className={styles.ClickButton} onClick={scrollTop}>
+        <span className={styles.ArrowUpSpan}>top</span>
+      </div>
+    </div>
   )
 }
-
-export default GotToTop

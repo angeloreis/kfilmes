@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import * as S from './styles'
+import styles from './styles.module.scss'
 
 interface LogoSiteType {
   description: string
@@ -13,14 +14,14 @@ const LogoSite: React.FC<LogoSiteType> = ({
   heightImage
 }) => {
   return (
-    <S.layoutLogo>
+    <div className={styles.layoutLogo}>
       <img
         src="./img/logo-medio.png"
         alt={description}
         width={widthImage}
         height={heightImage}
       />
-    </S.layoutLogo>
+    </div>
   )
 }
 export default LogoSite

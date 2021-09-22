@@ -7,6 +7,10 @@
 :root {
   --white: #ffffff;
 
+  --red-100: #b02c1f;
+  
+  --red-900: #4e0903;
+
   --gray-100: #e1e1e6;
   --gray-300: #a8a8b3;
   --gray-800: #29292e;
@@ -16,7 +20,6 @@
   --cyan-500: #61dafd;
 
   --yellow-500: #eba417;
-
 }
 
 @media (max-width: 1080px) {
@@ -38,7 +41,7 @@ body {
 }
 
 body, input, textarea, select, button {
-  font: 400 1rem "Roboto", sans-serif;
+  font: 400 1rem 'Poppins', Helvetica, sans-serif;
 }
 
 button {

@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import * as S from './styles'
+import styles from './styles.module.scss'
 
 interface LogoDreamType {
   description: string
@@ -13,14 +14,14 @@ const LogoDream: React.FC<LogoDreamType> = ({
   heightImage
 }) => {
   return (
-    <S.layoutLogoDream>
+    <div className={styles.layoutLogoDream}>
       <img
         src="./img/makeDream.png"
         alt={description}
         width={widthImage}
         height={heightImage}
       />
-    </S.layoutLogoDream>
+    </div>
   )
 }
 export default LogoDream

@@ -1,0 +1,32 @@
+.WrapperDiv{
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border-radius: 100px;
+  background: var(--red-100);
+  width: 45px;
+  height: 45px;
+
+  transition: filter 0.3s;
+
+  :hover {
+    filter: brightness(0.8);
+  }
+}
+
+.ClickButton{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  cursor: pointer;
+  color: #fff;
+}
+
+.ArrowUpSpan {
+  font-size: medium;
+  font-weight: bold;
+}

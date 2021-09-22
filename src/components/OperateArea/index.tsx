@@ -1,23 +1,17 @@
 import React from 'react'
+import styles from './styles.module.scss';
 
-import * as S from './styles'
-
-interface Props {
-  children: React.ReactNode
-}
-
-const OperateArea: React.FC<Props> = ({ children }) => {
+const OperateArea: React.FC = () => {
   return (
     <>
-      <S.TitleOperate>{children}</S.TitleOperate>
-      <S.ListMain>
-        <S.ListItem>Motion Graphics</S.ListItem>
-        <S.ListItem>Institucionais</S.ListItem>
-        <S.ListItem>Documentários</S.ListItem>
-        <S.ListItem>Campanhas políticas</S.ListItem>
-        <S.ListItem>Eventos</S.ListItem>
-        <S.ListItem>Lives</S.ListItem>
-      </S.ListMain>
+      <ul className={styles.ListMain}>
+        <li>Motion Graphics</li>
+        <li>Institucionais</li>
+        <li>Documentários</li>
+        <li>Campanhas políticas</li>
+        <li>Eventos</li>
+        <li>Lives</li>
+      </ul>
     </>
   )
 }

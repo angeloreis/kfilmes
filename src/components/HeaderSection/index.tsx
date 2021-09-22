@@ -1,6 +1,5 @@
 import React from 'react'
-import * as S from './styles'
-
+import styles from './styles.module.scss'
 interface HeaderTitleSectionProps {
   descriptionFirstline: string
   descriptionSecondLine: string
@@ -11,14 +10,14 @@ const HeaderTitleSection = ({
   descriptionSecondLine
 }: HeaderTitleSectionProps) => {
   return (
-    <S.WrapperHeaderSection>
-      <S.DescriptionFirstLine>
+    <div className={styles.WrapperHeaderSection}>
+      <p>
         {descriptionFirstline.toUpperCase()}
-      </S.DescriptionFirstLine>
-      <S.DescriptionSecondLine>
+      </p>
+      <p>
         {descriptionSecondLine.toUpperCase()}
-      </S.DescriptionSecondLine>
-    </S.WrapperHeaderSection>
+      </p>
+    </div>
   )
 }
 

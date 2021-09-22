@@ -1,0 +1,23 @@
+.ListMain {
+  list-style-image: url('/img/triangleArrowLeft.svg');
+  list-style-position: outside;
+  text-align: left;
+
+  margin-bottom: 60px;
+  padding-left: 50px;
+
+  li {
+    font-size: xxx-large;
+    font-weight: bolder;
+    
+    :hover {
+      color: #919da6;
+      cursor: pointer;
+      transition: color 0.5s;
+    }
+  }
+}
+
+.TitleOperate {
+  margin-top: 60px;
+}
