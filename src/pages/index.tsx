@@ -14,7 +14,6 @@ import styles from './home.module.scss'
 const Home: NextPage = () => {
   return (
     <>
-    <title>K Filmes | Você sonha e a gente Realiza!</title>
     <Header>
       <Menu />
     </Header>
@@ -25,8 +24,14 @@ const Home: NextPage = () => {
             widthImage={400}
           />
     </div>
-    <div className={styles.contentContainer} id="about-us">
-        <AboutUs />    
+    <div className={styles.contentContainerAboutUs}>
+      <HeaderTitleSection
+          descriptionFirstline="Quem"
+          descriptionSecondLine="somos?"
+      />        
+    </div>
+    <div className={styles.contentContainerAboutUs} id="about-us">    
+      <AboutUs />          
     </div>
     <div className={styles.contentContainerOperateArea} id="operate-area">
         <HeaderTitleSection
