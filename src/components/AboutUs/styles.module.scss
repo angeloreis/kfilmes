@@ -1,19 +1,9 @@
-.WrapperAboutUsMain {
+.WrapperAboutUsMain {  
   display: flex;
   flex-direction: row;
-}
-
-.WrapperTitleAboutUsMain {  
-  display: flex;
-  flex-direction: column;
-}
-
-.ContainerText {
-  display: flex;
-  flex-direction: column;
   width: 100%;
 
-  p {
+  div > p {
     text-align: justify;
 
     font-size: 1.4rem;

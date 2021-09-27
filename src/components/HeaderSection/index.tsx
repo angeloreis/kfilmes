@@ -1,22 +1,18 @@
 import React from 'react'
 import styles from './styles.module.scss'
 interface HeaderTitleSectionProps {
-  descriptionFirstline: string
-  descriptionSecondLine: string
+  descriptionLine: string
 }
 
 const HeaderTitleSection = ({
-  descriptionFirstline,
-  descriptionSecondLine
+  descriptionLine
 }: HeaderTitleSectionProps) => {
   return (
     <div className={styles.WrapperHeaderSection}>
       <p>
-        {descriptionFirstline.toUpperCase()}
+        {descriptionLine.toUpperCase()}
       </p>
-      <p>
-        {descriptionSecondLine.toUpperCase()}
-      </p>
+      
     </div>
   )
 }
