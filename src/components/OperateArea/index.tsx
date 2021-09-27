@@ -3,7 +3,6 @@ import styles from './styles.module.scss';
 
 const OperateArea: React.FC = () => {
   return (
-    <>
       <ul className={styles.ListMain}>
         <li>Motion Graphics</li>
         <li>Institucionais</li>
@@ -11,8 +10,7 @@ const OperateArea: React.FC = () => {
         <li>Campanhas políticas</li>
         <li>Eventos</li>
         <li>Lives</li>
-      </ul>
-    </>
+      </ul>    
   )
 }
 
