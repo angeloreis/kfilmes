@@ -7,7 +7,11 @@ import styles from './styles.module.scss'
 export const AboutUs = () => {
   return (
     <div className={styles.WrapperAboutUsMain}>
-      <div className={styles.ContainerText}>        
+      <div className={styles.ContainerText}>
+        <HeaderTitleSection
+          descriptionFirstline="Quem"
+          descriptionSecondLine="somos?"
+        />
         <p>
           Quando você adiciona{' '}
           <strong>QUALIDADE, AGILIDADE E CRIATIVIDADE,</strong> com pessoas
