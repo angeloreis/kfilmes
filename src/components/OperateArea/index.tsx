@@ -3,6 +3,8 @@ import styles from './styles.module.scss';
 
 const OperateArea: React.FC = () => {
   return (
+    <>
+      <p className="h2 text-uppercase fw-bolder">Quem Somos?</p>
       <ul className={styles.ListMain}>
         <li>Motion Graphics</li>
         <li>Institucionais</li>
@@ -11,6 +13,7 @@ const OperateArea: React.FC = () => {
         <li>Eventos</li>
         <li>Lives</li>
       </ul>    
+    </>    
   )
 }
 
