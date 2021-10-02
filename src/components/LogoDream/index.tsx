@@ -1,27 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import styles from './styles.module.scss'
+import { Figure } from 'react-bootstrap'
 
 interface LogoDreamType {
   description: string
-  widthImage?: number
-  heightImage?: number
 }
 
 const LogoDream: React.FC<LogoDreamType> = ({
-  description,
-  widthImage,
-  heightImage
+  description
 }) => {
   return (
-    <div className={styles.layoutLogoDream}>
-      <img
-        src="./img/makeDream.png"
+    <Figure>
+        <Figure.Image
+        width="80%"
         alt={description}
-        width={widthImage}
-        height={heightImage}
-      />
-    </div>
+        src="./img/makeDream.png"
+        className="float-start"
+        />
+      </Figure>
   )
 }
 export default LogoDream

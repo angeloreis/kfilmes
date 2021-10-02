@@ -1,27 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import styles from './styles.module.scss'
+import { Figure } from 'react-bootstrap'
 
 interface LogoSiteType {
   description: string
-  widthImage?: number
-  heightImage?: number
 }
 
 const LogoSite: React.FC<LogoSiteType> = ({
-  description,
-  widthImage,
-  heightImage
+  description
 }) => {
   return (
-    <div className={styles.layoutLogo}>
-      <img
-        src="./img/logo-medio.png"
+      <Figure>
+        <Figure.Image
+        width="80%"
         alt={description}
-        width={widthImage}
-        height={heightImage}
-      />
-    </div>
+        src="./img/logo-medio.png"
+        className="float-end"
+        />
+      </Figure>
   )
 }
+
 export default LogoSite
