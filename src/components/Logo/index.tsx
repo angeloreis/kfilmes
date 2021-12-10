@@ -1,24 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import { Figure } from 'react-bootstrap'
-
+import { Box, Image} from '@chakra-ui/react'
 interface LogoSiteType {
   description: string
 }
 
-const LogoSite: React.FC<LogoSiteType> = ({
+export function LogoBannerSite({
   description
-}) => {
+}: LogoSiteType){
   return (
-      <Figure>
-        <Figure.Image
-        width="80%"
+      <Image 
+        boxSize="350px"
         alt={description}
         src="./img/logo-medio.png"
-        className="float-end"
-        />
-      </Figure>
+        objectFit='cover'
+      />        
   )
 }
-
-export default LogoSite

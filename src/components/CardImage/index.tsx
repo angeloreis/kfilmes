@@ -1,18 +1,16 @@
-import { Card, Image } from "react-bootstrap";
+import { Image } from "@chakra-ui/react";
 
 interface PropsCardImage {
     sourceImage: string
     titleCard?: string
 }
 
-const CardImage: React.FC<PropsCardImage> = ({ sourceImage, titleCard }) => {
+export function CardImage({ sourceImage, titleCard }: PropsCardImage) {
     return (
         <Image
             src={sourceImage}
             alt={titleCard}
-            thumbnail
+            boxSize='150px'
         />                        
     );
 }
-
-export default CardImage

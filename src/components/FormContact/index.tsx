@@ -1,47 +1,57 @@
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
-import { FaPaperPlane } from 'react-icons/fa'
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { FaPaperPlane } from "react-icons/fa";
 
-import styles from './styles.module.scss'
-import { Console } from 'console'
-export const FormContact = () => {
-    const [username, setUserName] = useState('');
-    const [phonewhats, setPhoneWhats] = useState('');
-    const [textContact, setTextContact] = useState('');
-    const [whatsAppUrl, setWhatsAppUrl] = useState('');
+import { Button } from "@chakra-ui/react";
 
-    const router = useRouter();
+import { Input } from "components/Input";
 
-    function handleSubmit() {        
-        const msgZap = `${textContact}. Meu contato é este: ${phonewhats} - ${username} - Contato direto do site!`;
-        setWhatsAppUrl(`https://wa.me/559188497692?text=${msgZap}`);        
-    }
+export function FormContact() {
+  const [username, setUserName] = useState("");
+  const [phonewhats, setPhoneWhats] = useState("");
+  const [textContact, setTextContact] = useState("");
+  const [whatsAppUrl, setWhatsAppUrl] = useState("");
 
-    useEffect(()=>{
-        router.push(whatsAppUrl);
-    },[whatsAppUrl])
+  const router = useRouter();
 
-    return (
-        <form className={styles.ContainerForm} onSubmit={handleSubmit}>
-                <input
-                type="text"
-                placeholder="Informe seu nome completo"
-                required={true}
-                onChange={(event) => setUserName(event.target.value)}
-                />
-                <input
-                type="text"
-                placeholder="WhatsApp: (99) 9.9999-9999"                
-                required={true}
-                onChange={(event) => setPhoneWhats(event.target.value)}
-                />
-                <input
-                type="text"
-                placeholder="Digite aqui seu texto"
-                required={true}
-                onChange={(event) => setTextContact(event.target.value)}
-                />
-                <button type="submit">Enviar <FaPaperPlane/></button>
-        </form>
-    );
+  function handleSubmit() {
+    const msgZap = `${textContact}. Meu contato é este: ${phonewhats} - ${username} || Contato via site`;
+    setWhatsAppUrl(`https://wa.me/559188497692?text=${msgZap}`);
+  }
+
+  useEffect(() => {
+    router.push(whatsAppUrl);
+  }, [whatsAppUrl]);
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <Input
+        name="username"
+        type="text"
+        placeholder="Informe seu nome completo"
+        onChange={(event) => setUserName(event.target.value)}
+      />
+      <Input
+        name="phonewhats"
+        type="text"
+        placeholder="WhatsApp: (99) 9.9999-9999"
+        onChange={(event) => setPhoneWhats(event.target.value)}
+      />
+      <Input
+        name="textContact"
+        type="text"
+        placeholder="Digite aqui seu texto"
+        onChange={(event) => setTextContact(event.target.value)}
+      />
+      <Button
+        type="submit"
+        colorScheme="green"
+        rightIcon={<FaPaperPlane />}
+        width="100%"
+        py='5'
+      >
+        Enviar
+      </Button>
+    </form>
+  );
 }

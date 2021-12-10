@@ -1,27 +1,54 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap'
 
-import { FaBars } from 'react-icons/fa'
+import {
+   Flex,
+   Stack,
+   Drawer,
+   DrawerOverlay,
+   DrawerContent,
+   DrawerCloseButton,
+   DrawerHeader,
+   DrawerBody,
+   useBreakpointValue  } from '@chakra-ui/react'
+   
+import { Menuitems } from './MenuItems';
 
-const Menu = () => {
+import { useSidebarDrawer } from 'contexts/SidebarDrawerContext';
+
+export function Menu() {
+  const {isOpen, onClose} = useSidebarDrawer();
+  const isDrawerSiderBar = useBreakpointValue({ base: true, lg: false })
+ 
+  if (isDrawerSiderBar) {
+    return (
+        <Drawer isOpen={isOpen} placement='left' onClose={onClose}>
+            <DrawerOverlay>
+                <DrawerContent bg='gray.800' p='4'>
+                    <DrawerCloseButton mt='6'/>
+                    <DrawerHeader>NAVEGAÇÃO</DrawerHeader>
+                    <DrawerBody>
+                    <Stack spacing='12' align='flex-start'>
+                      <a href="#about-us">Quem Somos</a>
+                      <a href="#operate-area">Área que Atuamos</a>
+                      <a href="#our-costumers">Nossos Clientes</a>
+                      <a href="#studio">Estúdio</a>
+                      <a href="#contact">Contato</a>          
+                    </Stack>  
+                    </DrawerBody>
+                </DrawerContent>
+            </DrawerOverlay>
+        </Drawer>
+    );    
+  }
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-      <Navbar.Brand className="fw-bolder text-uppercase" href="/" >KFilmes</Navbar.Brand>
-      <Navbar.Toggle aria-controls="navbarScroll" />
-      <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
-        <Nav className="mr-auto my-1 my-lg-3 h5 text-white">
-          <Nav.Link href="#about-us">Quem Somos</Nav.Link>
-          <Nav.Link href="#operate-area">Área que Atuamos</Nav.Link>
-          <Nav.Link href="#our-costumers">Nossos Clientes</Nav.Link>
-          <Nav.Link href="#studio">Estúdio</Nav.Link>
-          <Nav.Link href="#contact">Contato</Nav.Link>          
-        </Nav>
-      </Navbar.Collapse>
-      </Container>      
-    </Navbar>    
+    <Flex
+      as='header'
+      maxWidth={1480}
+      mx='auto'
+      my='8'
+      px='6'>
+        <Menuitems />  
+    </Flex>        
   )
 }
-
-export default Menu
