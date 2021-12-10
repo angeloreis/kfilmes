@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { FaPaperPlane } from "react-icons/fa";
 
-import { Button } from "@chakra-ui/react";
+import { Button, VStack } from "@chakra-ui/react";
 
 import { Input } from "components/Input";
 
@@ -25,33 +25,35 @@ export function FormContact() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Input
-        name="username"
-        type="text"
-        placeholder="Informe seu nome completo"
-        onChange={(event) => setUserName(event.target.value)}
-      />
-      <Input
-        name="phonewhats"
-        type="text"
-        placeholder="WhatsApp: (99) 9.9999-9999"
-        onChange={(event) => setPhoneWhats(event.target.value)}
-      />
-      <Input
-        name="textContact"
-        type="text"
-        placeholder="Digite aqui seu texto"
-        onChange={(event) => setTextContact(event.target.value)}
-      />
-      <Button
-        type="submit"
-        colorScheme="green"
-        rightIcon={<FaPaperPlane />}
-        width="100%"
-        py='5'
-      >
-        Enviar
-      </Button>
+      <VStack gap='12'>
+        <Input
+          name="username"
+          type="text"
+          placeholder="Informe seu nome completo"
+          onChange={(event) => setUserName(event.target.value)}
+        />
+        <Input
+          name="phonewhats"
+          type="text"
+          placeholder="WhatsApp: (99) 9.9999-9999"
+          onChange={(event) => setPhoneWhats(event.target.value)}
+        />
+        <Input
+          name="textContact"
+          type="text"
+          placeholder="Digite aqui seu texto"
+          onChange={(event) => setTextContact(event.target.value)}
+        />
+        <Button
+          type="submit"
+          colorScheme="green"
+          rightIcon={<FaPaperPlane />}
+          width="100%"
+          py="5"
+        >
+          Enviar
+        </Button>
+      </VStack>
     </form>
   );
 }
