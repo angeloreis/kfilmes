@@ -1,27 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import styles from './styles.module.scss'
-
+import { Image } from '@chakra-ui/react'
 interface LogoDreamType {
   description: string
-  widthImage?: number
-  heightImage?: number
 }
 
-const LogoDream: React.FC<LogoDreamType> = ({
-  description,
-  widthImage,
-  heightImage
-}) => {
+export function LogoBannerDream({
+  description
+}: LogoDreamType){
   return (
-    <div className={styles.layoutLogoDream}>
-      <img
-        src="./img/makeDream.png"
+      <Image 
+        boxSize="350px"
         alt={description}
-        width={widthImage}
-        height={heightImage}
-      />
-    </div>
+        src="./img/makeDream.png"
+        objectFit='cover'
+      />        
   )
 }
-export default LogoDream

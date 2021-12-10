@@ -1,22 +1,14 @@
 import React from 'react';
+import { Flex } from '@chakra-ui/react';
 
-const PlaceOnMap = () => {
+export function PlaceOnMap() {
   return (
-    <div className='flex flex-col'>
-      <div className='h-1 bg-gray-100 rounded overflow-hidden'>
-        <div className='w-24 h-full bg-red-500'></div>
-      </div>
-      <div className='flex flex-wrap sm:flex-row flex-col py-6 mb-12'>
-        <h1 className='sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0'>
+    <Flex>
+        <h1>
           Localização
         </h1>
-        <p className='sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0'>
-          Venha tomar um café conosco.
-          <br />A porta está sempre aberta!
-        </p>
-
+        
         <iframe
-          className='w-full border-0'
           width='100%'
           height='450'
           frameBorder='0'
@@ -28,13 +20,8 @@ const PlaceOnMap = () => {
             marginTop: '15px',
             marginBottom: '35px'
           }}
-          allowFullScreen=''
-          aria-hidden='false'
-          tabIndex='0'
+          aria-hidden='false'          
         />
-      </div>
-    </div>
+    </Flex>
   );
 };
-
-export default PlaceOnMap;

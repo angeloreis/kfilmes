@@ -1,46 +1,55 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import HeaderTitleSection from '../HeaderSection'
+import { Stack, Box, Image, Text } from '@chakra-ui/react'
 
-import styles from './styles.module.scss'
-
-export const AboutUs = () => {
+export function AboutUs() {
   return (
-    <div className={styles.WrapperAboutUsMain}>
-      <div>
-        <p>
+    <>
+    <Stack
+      gap='4'
+      direction='row'
+      align='center'
+    >
+      <Box w='350px' spacing='4' px='8'>
+        <Text as='h1' fontSize='40px' fontWeight='bold'>Quem Somos?</Text>
+        <Text align='justify' >
           Quando você adiciona{' '}
           <strong>QUALIDADE, AGILIDADE E CRIATIVIDADE,</strong> com pessoas
           apaixonadas pelo que fazem, o resultado surpreende.
-        </p>
-        <p>
+        </Text>
+        <Text  align='justify' >
           Nosso diferencial é o <strong>AMOR</strong> ao qual colocamos em
           nossos diversos serviços. Vamos além de equipamentos modernos e de
           altíssima resolução, <strong>NOSSO FOCO</strong> é{' '}
           <strong>EMOCIONAR</strong>, arrepiar a pele e trazer lagrimas de
           emoção a quem assiste o que fazemos.
-        </p>
-        <p>
+        </Text>
+        <Text  align='justify' >
           Seja o nosso Motion graphics <strong>CRIATIVO</strong>, os nossos
           roteiros que tocam os sentimentos ou nossa edição{' '}
-          <strong>DINÂMICA</strong>.          
-        </p>
-        <p>
+          <strong>DINÂMICA</strong>.
+        </Text>
+        <Text  align='justify' >
           Em cada take, seja ele na terra ou no ar, sempre buscamos e{' '}
           <strong>ALCANÇAMOS </strong>
           algo novo e <strong>ESPETACULAR</strong>. Estamos prontos para somar
           forças com vocês e atender seus clientes de forma{' '}
           <strong>INOVADORA</strong>, em todos os formatos disponíveis no{' '}
           <strong>MERCADO.</strong>
-        </p>
-        <p>
-            Nos somos a <strong>K FILMES!</strong>
-            <p>Somos a sua mais nova opção</p>
-          </p>
-      </div>     
-      <div className={styles.AboutUsRightImg}>
-        <img src='img/about-us-kfilmes-right.png' min-height="70%" alt="K Filmes Digital - Quem Somos"/>
-      </div>
-    </div>
+        </Text>
+        <br/>
+        <Text align='justify'>
+          Nos somos a <strong>K FILMES!</strong>
+          <Text>Somos a sua mais nova opção</Text>
+        </Text>
+      </Box>
+      <Box spacing='4' px='8'>
+      <Image
+              src='img/about-us-kfilmes-right.png'
+              alt="K Filmes Digital - Quem Somos"
+              height="660px"/>
+      </Box>      
+    </Stack>
+    </>
   )
 }

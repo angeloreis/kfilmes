@@ -1,27 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import styles from './styles.module.scss'
-
+import { Box, Image} from '@chakra-ui/react'
 interface LogoSiteType {
   description: string
-  widthImage?: number
-  heightImage?: number
 }
 
-const LogoSite: React.FC<LogoSiteType> = ({
-  description,
-  widthImage,
-  heightImage
-}) => {
+export function LogoBannerSite({
+  description
+}: LogoSiteType){
   return (
-    <div className={styles.layoutLogo}>
-      <img
-        src="./img/logo-medio.png"
+      <Image 
+        boxSize="350px"
         alt={description}
-        width={widthImage}
-        height={heightImage}
-      />
-    </div>
+        src="./img/logo-medio.png"
+        objectFit='cover'
+      />        
   )
 }
-export default LogoSite

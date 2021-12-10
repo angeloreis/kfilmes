@@ -1,14 +1,15 @@
 import React from 'react'
-import styles from './styles.module.scss'
+import { Flex, Button, Text } from '@chakra-ui/react'
+import {RiArrowUpCircleFill} from 'react-icons/ri'
 
 export const GotToTop: React.FC = () => {
   const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
-    <div className={styles.WrapperDiv}>
-      <div className={styles.ClickButton} onClick={scrollTop}>
-        <span className={styles.ArrowUpSpan}>top</span>
-      </div>
-    </div>
+    <>
+      <Button size='sm' variant='solid' colorScheme='red' borderRadius='100' leftIcon={<RiArrowUpCircleFill />} onClick={scrollTop}>
+        <Text fontSize='16px'>Para o Topo</Text>
+      </Button>
+    </>
   )
 }
