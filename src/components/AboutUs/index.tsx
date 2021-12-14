@@ -6,9 +6,6 @@ export function AboutUs() {
   return (
     <>
       <Box w="350px" spacing="4" px="8">
-        <Text as="h1" fontSize="40px" fontWeight="bold">
-          Quem Somos?
-        </Text>
         <Text align="justify">
           Quando você adiciona{" "}
           <strong>QUALIDADE, AGILIDADE E CRIATIVIDADE,</strong> com pessoas
