@@ -1,32 +1,37 @@
-import React from 'react'
+import React from "react";
 
-import { List, ListItem, ListIcon, Text } from '@chakra-ui/react'
-import { RiPlayFill } from 'react-icons/ri'
-import { ItemOfList } from './ItemOfList'
+import { Flex, List, ListItem, Text, useBreakpointValue } from "@chakra-ui/react";
+import { RiPlayFill } from "react-icons/ri";
+
+import { ItemOfList } from "./ItemOfList";
 
 export function OperateArea() {
+  const isWideVersion = useBreakpointValue({ base: false, lg: true });
+
   return (
     <>
+      <Flex direction="column" align='flex-start' py='6'>
       <List>
         <ListItem>
-          <ItemOfList description='Motion Graphics' Icon={RiPlayFill}/>
+          <ItemOfList description="Motion Graphics" Icon={RiPlayFill} colorIcon='red'/>
         </ListItem>
         <ListItem>
-          <ItemOfList description='Institucionais'  Icon={RiPlayFill}/>
+          <ItemOfList description="Institucionais" Icon={RiPlayFill} colorIcon='red' />
         </ListItem>
         <ListItem>
-          <ItemOfList description='Documentários'  Icon={RiPlayFill}/>
+          <ItemOfList description="Documentários" Icon={RiPlayFill} colorIcon='red' />
         </ListItem>
         <ListItem>
-          <ItemOfList description='Campanhas políticas'  Icon={RiPlayFill}/>
+          <ItemOfList description="Campanhas políticas" Icon={RiPlayFill} colorIcon='red' />
         </ListItem>
         <ListItem>
-          <ItemOfList description='Eventos'  Icon={RiPlayFill}/>
+          <ItemOfList description="Eventos" Icon={RiPlayFill} colorIcon='red' />
         </ListItem>
         <ListItem>
-          <ItemOfList description='Lives'  Icon={RiPlayFill}/>
+          <ItemOfList description="Lives" Icon={RiPlayFill}  colorIcon='red'/>
         </ListItem>
-      </List>    
+      </List>
+    </Flex>
     </>    
-  )
+  );
 }

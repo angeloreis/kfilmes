@@ -6,7 +6,7 @@ interface HeaderProps {
   children: React.ReactNode
 }
 
-export function Header({ children }: HeaderProps) {
+export function HeaderSite({ children }: HeaderProps) {
 
   const { onOpen } = useSidebarDrawer();
 

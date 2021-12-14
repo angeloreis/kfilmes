@@ -7,9 +7,9 @@ export default class MyDocument extends Document {
         return (
             <Html>
                 <Head>                                        
-                    <link rel="preconnect" href="https://fonts.googleapis.com" />
-                    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&display=swap" rel="stylesheet" />
-                    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
+                    <link rel="shortcut icon" href="favicon.png" type="image/png" />
                     <meta
                     name="description"
                     content="K Filmes - Você sonha e a gente Realiza!"
