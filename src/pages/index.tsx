@@ -30,7 +30,7 @@ export default function Home() {
 
       <Divider py={isWideVersion ? "4" : "1"} variant="none" />
 
-      <AboutUsSection isWideVersion/>
+      <AboutUsSection isWideVersion={isWideVersion}/>
 
       <Divider py={isWideVersion ? "8" : "1"} variant="none" />
 
