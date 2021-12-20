@@ -26,7 +26,7 @@ export default function Home() {
         <Menu />
       </HeaderSite>
 
-      <BannerLogo isWideVersion/>
+      <BannerLogo isWideVersion={isWideVersion}/>
 
       <Divider py={isWideVersion ? "4" : "1"} variant="none" />
 
@@ -42,11 +42,11 @@ export default function Home() {
 
       <Divider py="8" variant="none" />
 
-      <StudioSection />
+      <StudioSection isWideVersion={isWideVersion}/>
 
       <Divider py="8" variant="none" />
 
-      <ContactSection />
+      <ContactSection isWideVersion={isWideVersion}/>
 
       <Flex align="flex-end" justify="flex-end">
         <GotToTop />
