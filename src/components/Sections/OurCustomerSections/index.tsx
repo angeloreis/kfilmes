@@ -9,7 +9,7 @@ export function OurCustomersSection() {
             NOSSOS CLIENTES
           </Text>
 
-          <SimpleGrid columns={[5, null, 5]} spacing="25px">
+          <SimpleGrid columns={{sm: 1, md: 5}} spacing="10" align='center'>
             <CardImage
               sourceImage="../img/costumers/gov_pa.png"
               titleCard="Governo do Estado do Pará"
