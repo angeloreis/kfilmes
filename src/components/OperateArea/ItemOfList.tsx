@@ -5,10 +5,11 @@ interface ItemOfListProps {
     Icon: any
     colorIcon?: string
     colorTextHover?: string
+    fontSize?: string
 }
 
-export function ItemOfList({description, Icon, colorIcon = 'white', colorTextHover = 'red'}: ItemOfListProps) {
+export function ItemOfList({description, Icon, colorIcon = 'white', colorTextHover = 'red', fontSize = '2xl'}: ItemOfListProps) {
     return (
-        <Text fontSize='2xl' fontWeight='900' _hover={{cursor: 'pointer', color: colorTextHover}}><ListIcon as={Icon} color={colorIcon} />{description}</Text>
+        <Text fontSize={fontSize} fontWeight='900' _hover={{cursor: 'pointer', color: colorTextHover}}><ListIcon as={Icon} color={colorIcon} />{description}</Text>
     )
 }
