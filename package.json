@@ -2,6 +2,7 @@
   "name": "kfilmes",
   "version": "3.1.0",
   "private": true,
+  "license": "UNLICENSED",
   "author": {
     "name": "Angelo Reis",
     "email": "angelo.desenvolvedor@gmail.com",

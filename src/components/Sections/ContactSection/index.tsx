@@ -1,8 +1,9 @@
 import { Flex, Stack, Text, SimpleGrid } from "@chakra-ui/react";
 import { FormContact } from "components/FormContact";
 import { SocialContactService } from "components/SocialContactFooter";
+import { HasWideVersionProps } from "utils/typesUniversalComponents";
 
-export function ContactSection() {
+export function ContactSection({isWideVersion}: HasWideVersionProps) {
     return (
         <Flex id="contact" justify="center">
         <Stack direction="column" justify="center">
@@ -10,11 +11,9 @@ export function ContactSection() {
             CONTATO
           </Text>
 
-          <Stack direction="row">
-            <SimpleGrid minChildWidth="350px" spacing="25px" px="20" py="10">
+          <Stack direction={isWideVersion ? "column": "row"} align="center">
+            <SimpleGrid  columns={{sm: 1, md: 2}} spacing="15" px="20" py="10">
               <FormContact />
-            </SimpleGrid>
-            <SimpleGrid minChildWidth="350px" spacing="25px" py="10">
               <SocialContactService />
             </SimpleGrid>
           </Stack>
