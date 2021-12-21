@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 import {
    Flex,
@@ -28,7 +29,7 @@ export function Menu() {
                     <DrawerHeader>NAVEGAÇÃO</DrawerHeader>
                     <DrawerBody>
                     <Stack spacing='12' align='flex-start'>
-                      <a href="/">Home</a>
+                      <Link href="#"><a>Home</a></Link>
                       <a href="#about-us">Quem Somos</a>
                       <a href="#operate-area">Área que Atuamos</a>
                       <a href="#our-costumers">Nossos Clientes</a>
