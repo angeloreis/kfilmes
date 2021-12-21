@@ -10,10 +10,10 @@ export function StudioSection({isWideVersion}: HasWideVersionProps) {
             ESTÚDIO COMPLETO
           </Text>
           <Stack direction={isWideVersion ? "row": "column"} align="center">
-            <SimpleGrid minChildWidth="350px" spacing="25px" py="10">
+            <SimpleGrid minChildWidth="350px" spacing="25px" py="10" align="center">
               <Image src="img/estudio_completo.png" alt="Estúdio completo" width={320}/>
             </SimpleGrid>
-            <SimpleGrid minChildWidth="350px" spacing="25px" py="10">
+            <SimpleGrid minChildWidth="250px" spacing="25px" py="10" align="center">
               <StudioText />
             </SimpleGrid>
           </Stack>

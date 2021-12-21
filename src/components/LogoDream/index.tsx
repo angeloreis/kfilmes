@@ -10,10 +10,9 @@ export function LogoBannerDream({
 }: LogoDreamType){
   return (
       <Image 
-        boxSize="350px"
         alt={description}
         src="./img/makeDream.png"
-        objectFit='cover'
+        width={{sm: 100, md: 260, lg: 360}}
       />        
   )
 }
