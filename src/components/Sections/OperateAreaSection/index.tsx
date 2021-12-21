@@ -12,7 +12,7 @@ export function OperateAreaSection() {
         bgPosition="center"
       >
         <Stack direction="column" align="center">
-          <Text as="h1" fontSize="48px" fontWeight="bold" py='10'>
+          <Text as="h1" fontSize="48px" fontWeight="bold" py='10' align="center">
             ÁREA QUE ATUAMOS
           </Text>          
           <Stack direction="column" align="left">

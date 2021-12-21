@@ -4,6 +4,7 @@ import { LinkOfMenu } from './LinkOfMenu';
 export function Menuitems() {
     return (
         <HStack spacing='8'>
+          <LinkOfMenu href="/" description="Home" />
           <LinkOfMenu href="#about-us" description="Quem Somos" />
           <LinkOfMenu href="#operate-area" description="Área que Atuamos" />
           <LinkOfMenu href="#our-costumers" description="Nossos Clientes" />

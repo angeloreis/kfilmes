@@ -12,7 +12,7 @@ export function ContactSection({isWideVersion}: HasWideVersionProps) {
           </Text>
 
           <Stack direction={isWideVersion ? "column": "row"} align="center">
-            <SimpleGrid  columns={{sm: 1, md: 2}} spacing="15" px="20" py="10">
+            <SimpleGrid columns={{sm: 1, md: 1, lg:2}} spacing="15" px="20" py="10">
               <FormContact />
               <SocialContactService />
             </SimpleGrid>

@@ -28,6 +28,7 @@ export function Menu() {
                     <DrawerHeader>NAVEGAÇÃO</DrawerHeader>
                     <DrawerBody>
                     <Stack spacing='12' align='flex-start'>
+                      <a href="/">Home</a>
                       <a href="#about-us">Quem Somos</a>
                       <a href="#operate-area">Área que Atuamos</a>
                       <a href="#our-costumers">Nossos Clientes</a>

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import { Box, Image} from '@chakra-ui/react'
+import { Image} from '@chakra-ui/react'
 interface LogoSiteType {
   description: string
 }
@@ -10,10 +10,9 @@ export function LogoBannerSite({
 }: LogoSiteType){
   return (
       <Image 
-        boxSize="350px"
         alt={description}
         src="./img/logo-medio.png"
-        objectFit='cover'
+        width={{sm: 100, md: 260, lg: 360}}
       />        
   )
 }
