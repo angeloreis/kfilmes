@@ -10,13 +10,18 @@ export function FormContact() {
   const [username, setUserName] = useState("");
   const [phonewhats, setPhoneWhats] = useState("");
   const [textContact, setTextContact] = useState("");
-  
+  const [whatsAppUrl, setWhatsAppUrl] = useState("");
+
   const router = useRouter();
 
   function handleSubmit() {
     const msgZap = `${textContact}. Meu contato é este: ${phonewhats} - ${username} || Contato via site`;
-    router.push(`https://wa.me/559188497692?text=${msgZap}`)
+    setWhatsAppUrl(`https://wa.me/559188497692?text=${msgZap}`);    
   }
+
+  useEffect(()=>{
+    router.push(whatsAppUrl)
+  },[whatsAppUrl]);
 
   return (
     <form onSubmit={handleSubmit}>
